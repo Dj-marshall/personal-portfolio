@@ -5,11 +5,14 @@
 }
 
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   height: 100vh;
+
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #e2e2e2;
   
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
   grid-template-areas: 
     ". header ."
     ". main ."
@@ -19,7 +22,17 @@ body {
 
 header {
   grid-area: header;
-  padding: 20px 0 20px 0;
+  padding: 1rem 0 1rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.banner-image {
+  width: 90%;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 0.5rem;
 }
 
 .header-wrapper {
@@ -49,6 +62,38 @@ header {
 
 main {
   grid-area: main;
+
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+
+  grid-template-areas: 
+    "intro-text rock-image"
+    "badge-section badge-section "
+  ;
+
+}
+
+.introduction-text {
+  grid-area: intro-text;
+}
+
+.rock-image {
+  grid-area: rock-image;
+  width: 100%;
+}
+
+.badge-section {
+  grid-area: badge-section;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.badge {
+  height: 100px;
+  width: 100px;
+  background-color: #000;
+  padding: 2rem;
 }
 
 footer {
