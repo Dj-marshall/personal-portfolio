@@ -3,3 +3,56 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  height: 100vh;
+  
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: 
+    ". header ."
+    ". main ."
+    ". footer ."
+  ;
+}
+
+header {
+  grid-area: header;
+  padding: 20px 0 20px 0;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+
+ nav ul {
+  display: flex;
+ }
+
+ li {
+  list-style-type: none;
+  padding: 10px
+ }
+
+ a {
+  text-decoration: none;
+  color: #000;
+}
+
+.current-page {
+  color: #FF00B1;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+}
